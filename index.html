@@ -10,78 +10,75 @@
 body{
 margin:0;
 font-family: 'Segoe UI', Arial;
-background: linear-gradient(180deg,#ffcc70,#ff8c42);
+background: linear-gradient(180deg,#ff512f,#dd2476);
+color:white;
 text-align:center;
+overflow-x:hidden;
 }
 
 /* TOPO */
 .header{
-background: linear-gradient(90deg,#ff0000,#ff6600,#ffcc00);
+background: linear-gradient(90deg,#ff0000,#ffcc00);
 padding:30px;
-font-size:36px;
+font-size:40px;
 font-weight:bold;
+letter-spacing:4px;
 color:white;
-letter-spacing:3px;
+text-shadow:2px 2px 5px rgba(0,0,0,0.5);
 }
 
-/* SEÇÃO PRINCIPAL */
+/* HERO */
 .hero{
 padding:60px 20px;
 }
 
 .hero h1{
-font-size:42px;
-margin-bottom:15px;
+font-size:48px;
+margin-bottom:20px;
 color:black;
 }
 
-/* CÍRCULO CENTRAL */
-.scene{
+/* CAPA */
+.poster{
 margin:40px auto;
-width:320px;
-height:320px;
+max-width:400px;
 background: radial-gradient(circle,#fff3b0,#ffb347);
-border-radius:50%;
-box-shadow:0 0 40px rgba(0,0,0,0.4);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:22px;
-font-weight:bold;
-color:#333;
+padding:20px;
+border-radius:30px;
+box-shadow:0 0 50px rgba(0,0,0,0.5);
+}
+
+.poster img{
+width:100%;
+border-radius:20px;
 }
 
 /* BOTÃO */
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:18px 40px;
+margin-top:40px;
+padding:20px 50px;
 background:#FFD700;
 color:black;
 text-decoration:none;
 font-weight:bold;
-font-size:20px;
-border-radius:40px;
+font-size:22px;
+border-radius:50px;
 transition:0.3s;
-box-shadow:0 8px 20px rgba(0,0,0,0.3);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 .btn:hover{
 background:#FFA500;
-transform:scale(1.05);
+transform:scale(1.07);
 }
 
-.section{
-padding:60px 20px;
-background:rgba(0,0,0,0.2);
-color:white;
-}
-
+/* RODAPÉ */
 .footer{
-padding:25px;
+padding:30px;
 background:rgba(0,0,0,0.4);
 font-size:14px;
-color:white;
+margin-top:60px;
 }
 
 </style>
@@ -94,24 +91,17 @@ PIPOCA OFICIAL
 </div>
 
 <div class="hero">
-<h1>Bem-vindo ao mundo do Pipoca!</h1>
 
-<div class="scene">
-EM BREVE FOTO OFICIAL
+<h1>Bem-vindo ao Mundo do Pipoca!</h1>
+
+<div class="poster">
+<img src="COLOQUE_AQUI_O_LINK_DA_SUA_IMAGEM">
 </div>
 
 <a class="btn" href="https://youtube.com/@pipocaoficial-p?si=VH01GTByg99dxqmw">
 Assistir no YouTube
 </a>
 
-</div>
-
-<div class="section">
-<h2>Sobre o Personagem</h2>
-<p>
-Pipoca é alegria, amizade e aventura!  
-Acompanhe cada episódio e faça parte dessa jornada.
-</p>
 </div>
 
 <div class="footer">
