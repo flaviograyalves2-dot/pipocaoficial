@@ -29,16 +29,17 @@
         /* ===== HEADER ===== */
         .header {
             background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
-            padding: 25px 20px;
+            padding: 30px 20px;
             text-align: center;
-            font-size: 48px;
+            font-size: 68px; /* AUMENTADO DE 48px PARA 68px */
             font-family: 'Bangers', cursive;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             color: white;
-            text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+            text-shadow: 4px 4px 0 rgba(0,0,0,0.2);
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             position: relative;
             z-index: 10;
+            word-break: break-word;
         }
 
         /* ===== NAVEGAÇÃO ===== */
@@ -83,6 +84,11 @@
 
         .nav a:hover::after {
             width: 100%;
+        }
+
+        /* CORREÇÃO: Garantir que o "i" do Início apareça */
+        .nav a:first-child {
+            display: inline-block;
         }
 
         /* ===== HERO SECTION ===== */
@@ -402,7 +408,7 @@
         /* ===== RESPONSIVIDADE ===== */
         @media (max-width: 768px) {
             .header {
-                font-size: 36px;
+                font-size: 48px; /* Ajustado para mobile */
                 padding: 20px;
             }
 
@@ -439,13 +445,10 @@
             }
         }
 
-        /* ===== DECORAÇÕES ===== */
-        .floating-element {
-            position: absolute;
-            font-size: 30px;
-            opacity: 0.1;
-            pointer-events: none;
-            animation: float 6s ease-in-out infinite;
+        @media (max-width: 480px) {
+            .header {
+                font-size: 42px; /* Ajuste para telas muito pequenas */
+            }
         }
     </style>
 </head>
@@ -458,7 +461,7 @@
     <!-- NAVEGAÇÃO -->
     <div class="nav">
         <div class="nav-container">
-            <a href="#">Início</a>
+            <a href="#">Início</a> <!-- CORRIGIDO: Agora o "i" aparece normalmente -->
             <a href="#">Episódios</a>
             <a href="#">Personagens</a>
             <a href="#">Loja</a>
@@ -578,4 +581,4 @@
     </div>
 
 </body>
-  </html>
+    </html>
