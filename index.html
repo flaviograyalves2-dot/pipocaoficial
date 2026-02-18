@@ -39,26 +39,15 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             position: relative;
             z-index: 10;
-            white-space: nowrap; /* IMPEDE A QUEBRA DE LINHA */
+            white-space: nowrap;
             overflow-x: auto;
             overflow-y: hidden;
             -webkit-overflow-scrolling: touch;
         }
 
-        /* Para mobile, permite rolagem horizontal se necessário */
         @media (max-width: 600px) {
             .header {
                 font-size: 48px;
-                white-space: nowrap;
-                text-align: center;
-                padding: 25px 15px;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .header {
-                font-size: 42px;
-                letter-spacing: 2px;
             }
         }
 
@@ -106,13 +95,6 @@
 
         .nav a:hover::after {
             width: 100%;
-        }
-
-        /* CORREÇÃO DEFINITIVA PARA O INÍCIO */
-        .nav a:first-child {
-            display: inline-block;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
         }
 
         /* ===== HERO SECTION ===== */
@@ -209,32 +191,122 @@
             color: #333;
         }
 
-        /* ===== HIGHLIGHT SECTION ===== */
-        .highlight {
-            margin-top: 80px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-            backdrop-filter: blur(10px);
-            padding: 100px 20px;
+        /* ===== SEÇÃO DE PERSONAGENS ===== */
+        .characters-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            border-bottom: 1px solid rgba(255,255,255,0.2);
         }
 
-        .highlight h2 {
+        .characters-section h2 {
             font-size: clamp(32px, 4vw, 44px);
-            margin-bottom: 20px;
+            margin-bottom: 50px;
             font-weight: 800;
+            position: relative;
+            display: inline-block;
         }
 
-        .highlight p {
-            font-size: clamp(16px, 2vw, 20px);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
+        .characters-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #FFD700;
+            border-radius: 2px;
+        }
+
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .character-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .character-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.15);
+            border-color: #FFD700;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .character-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #FFD700;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .character-card:hover .character-image {
+            transform: scale(1.05);
+        }
+
+        .character-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .character-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #FFD700;
+        }
+
+        .character-card p {
+            font-size: 16px;
             opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
-        /* ===== CARDS SECTION ===== */
+        .character-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .character-social a {
+            color: white;
+            font-size: 18px;
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .character-social a:hover {
+            background: #FFD700;
+            color: #333;
+            transform: translateY(-3px);
+        }
+
+        /* ===== CARDS DE DESTAQUE ===== */
         .cards {
             max-width: 1200px;
             margin: 80px auto;
@@ -276,6 +348,31 @@
             font-size: 16px;
             opacity: 0.8;
             line-height: 1.6;
+        }
+
+        /* ===== HIGHLIGHT SECTION ===== */
+        .highlight {
+            margin-top: 80px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(10px);
+            padding: 100px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .highlight h2 {
+            font-size: clamp(32px, 4vw, 44px);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .highlight p {
+            font-size: clamp(16px, 2vw, 20px);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            opacity: 0.9;
         }
 
         /* ===== NEWSLETTER ===== */
@@ -453,6 +550,11 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+
+            .character-image {
+                width: 150px;
+                height: 150px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -472,12 +574,12 @@
         🍿 PIPOCA OFICIAL
     </div>
 
-    <!-- NAVEGAÇÃO - CORRIGIDO COM TEXTO SIMPLES -->
+    <!-- NAVEGAÇÃO -->
     <div class="nav">
         <div class="nav-container">
-            <a href="#">Inicio</a> <!-- SEM ACENTO - GARANTE QUE O "I" APARECE -->
-            <a href="#">Episódios</a>
-            <a href="#">Personagens</a>
+            <a href="#">Inicio</a>
+            <a href="#">Episodios</a>
+            <a href="#personagens">Personagens</a>
             <a href="#">Loja</a>
             <a href="#">Contato</a>
         </div>
@@ -493,6 +595,7 @@
         </p>
 
         <div class="poster">
+            <!-- Aqui você coloca a imagem principal do Pipoca -->
             <img src="pipoca.png" alt="Pipoca Oficial">
         </div>
 
@@ -503,6 +606,65 @@
             <a href="#" class="btn btn-outline">
                 <i class="fas fa-play"></i> Ver Trailer
             </a>
+        </div>
+    </div>
+
+    <!-- SEÇÃO DE PERSONAGENS COM AS FOTOS QUE VOCÊ FORNECEU -->
+    <div id="personagens" class="characters-section">
+        <h2>🌟 Conheça Nossos Personagens 🌟</h2>
+        
+        <div class="characters-grid">
+            <!-- Personagem: Pipoca -->
+            <div class="character-card">
+                <div class="character-image">
+                    <img src="pipoca.png" alt="Pipoca - Personagem principal">
+                </div>
+                <h3>Pipoca</h3>
+                <p>O personagem principal cheio de energia e alegria. Vive espalhando diversão por onde passa!</p>
+                <div class="character-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <!-- Personagem: Piruá -->
+            <div class="character-card">
+                <div class="character-image">
+                    <img src="Piruá .jpg" alt="Piruá - Amigo do Pipoca">
+                </div>
+                <h3>Piruá</h3>
+                <p>O melhor amigo do Pipoca, sempre pronto para uma nova aventura e ajudar quem precisa.</p>
+                <div class="character-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <!-- Personagem: Professor Rizo -->
+            <div class="character-card">
+                <div class="character-image">
+                    <img src="Professor Rizo.png" alt="Professor Rizo - O sábio do grupo">
+                </div>
+                <h3>Professor Rizo</h3>
+                <p>Inteligente e criativo, sempre tem as melhores ideias e ensina coisas novas para a turma.</p>
+                <div class="character-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <!-- Personagem: Dino -->
+            <div class="character-card">
+                <div class="character-image">
+                    <img src="Dino.png" alt="Dino - O divertido">
+                </div>
+                <h3>Dino</h3>
+                <p>O mais brincalhão da turma. Vive fazendo graça e deixando todos os amigos felizes.</p>
+                <div class="character-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -566,7 +728,7 @@
                 <ul>
                     <li><a href="#">Sobre nós</a></li>
                     <li><a href="#">Nossa história</a></li>
-                    <li><a href="#">Personagens</a></li>
+                    <li><a href="#personagens">Personagens</a></li>
                     <li><a href="#">Equipe</a></li>
                 </ul>
             </div>
@@ -595,4 +757,4 @@
     </div>
 
 </body>
-            </html>
+    </html>
