@@ -39,15 +39,27 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             position: relative;
             z-index: 10;
-            white-space: nowrap;
-            overflow-x: auto;
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
+            /* CORREÇÃO: Removido white-space e overflow que causavam movimento */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
+        /* Ajuste para mobile */
         @media (max-width: 600px) {
             .header {
                 font-size: 48px;
+                padding: 25px 15px;
+                white-space: normal; /* Permite quebra apenas em mobile se necessário */
+                word-break: break-word;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .header {
+                font-size: 42px;
+                padding: 20px 10px;
             }
         }
 
@@ -799,7 +811,7 @@
         </div>
     </div>
 
-    <!-- SEÇÃO DE CONTATO COM E-MAIL E TELEFONE -->
+    <!-- SEÇÃO DE CONTATO -->
     <div id="contato" class="contact-section">
         <h2>📞 Fale Conosco</h2>
         
@@ -900,4 +912,4 @@
     </div>
 
 </body>
-    </html>
+                        </html>
