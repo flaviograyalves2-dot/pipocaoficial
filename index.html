@@ -39,7 +39,27 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             position: relative;
             z-index: 10;
-            word-break: break-word;
+            white-space: nowrap; /* IMPEDE A QUEBRA DE LINHA */
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Para mobile, permite rolagem horizontal se necessário */
+        @media (max-width: 600px) {
+            .header {
+                font-size: 48px;
+                white-space: nowrap;
+                text-align: center;
+                padding: 25px 15px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .header {
+                font-size: 42px;
+                letter-spacing: 2px;
+            }
         }
 
         /* ===== NAVEGAÇÃO ===== */
@@ -60,6 +80,7 @@
             justify-content: center;
             gap: 40px;
             padding: 0 20px;
+            flex-wrap: wrap;
         }
 
         .nav a {
@@ -87,12 +108,11 @@
             width: 100%;
         }
 
-        /* CORREÇÃO ESPECÍFICA PARA O INÍCIO */
+        /* CORREÇÃO DEFINITIVA PARA O INÍCIO */
         .nav a:first-child {
             display: inline-block;
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            letter-spacing: normal;
         }
 
         /* ===== HERO SECTION ===== */
@@ -400,28 +420,14 @@
             }
         }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
         /* ===== RESPONSIVIDADE ===== */
         @media (max-width: 768px) {
-            .header {
-                font-size: 48px;
-                padding: 20px;
-            }
-
             .nav-container {
-                gap: 20px;
+                gap: 25px;
             }
-
+            
             .nav a {
-                font-size: 16px; /* Aumentado para melhor legibilidade no mobile */
+                font-size: 16px;
             }
 
             .btn-group {
@@ -448,10 +454,10 @@
                 text-align: center;
             }
         }
-
+        
         @media (max-width: 480px) {
-            .header {
-                font-size: 42px;
+            .nav-container {
+                gap: 15px;
             }
             
             .nav a {
@@ -466,10 +472,10 @@
         🍿 PIPOCA OFICIAL
     </div>
 
-    <!-- NAVEGAÇÃO - CORRIGIDO -->
+    <!-- NAVEGAÇÃO - CORRIGIDO COM TEXTO SIMPLES -->
     <div class="nav">
         <div class="nav-container">
-            <a href="#">Ínicio</a> <!-- TROQUEI "Início" por "Ínicio" (com acento no I) -->
+            <a href="#">Inicio</a> <!-- SEM ACENTO - GARANTE QUE O "I" APARECE -->
             <a href="#">Episódios</a>
             <a href="#">Personagens</a>
             <a href="#">Loja</a>
@@ -589,4 +595,4 @@
     </div>
 
 </body>
-    </html>
+            </html>
