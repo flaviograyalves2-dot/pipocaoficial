@@ -350,6 +350,105 @@
             line-height: 1.6;
         }
 
+        /* ===== SEÇÃO DE CONTATO ===== */
+        .contact-section {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 60px 20px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .contact-section h2 {
+            font-size: clamp(32px, 4vw, 44px);
+            margin-bottom: 40px;
+            font-weight: 800;
+            color: #FFD700;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255,255,255,0.05);
+            padding: 20px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+            background: rgba(255,255,255,0.1);
+            border-color: #FFD700;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #FFD700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .contact-details {
+            flex: 1;
+            text-align: left;
+        }
+
+        .contact-details h3 {
+            font-size: 14px;
+            color: #FFD700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-details p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .contact-details a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: #FFD700;
+        }
+
+        .contact-whatsapp {
+            margin-top: 30px;
+        }
+
+        .contact-whatsapp .btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .contact-whatsapp .btn:hover {
+            background: #128C7E;
+        }
+
         /* ===== HIGHLIGHT SECTION ===== */
         .highlight {
             margin-top: 80px;
@@ -555,6 +654,16 @@
                 width: 150px;
                 height: 150px;
             }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .contact-details {
+                text-align: center;
+            }
         }
         
         @media (max-width: 480px) {
@@ -580,8 +689,7 @@
             <a href="#">Inicio</a>
             <a href="#">Episodios</a>
             <a href="#personagens">Personagens</a>
-            <a href="#">Loja</a>
-            <a href="#">Contato</a>
+            <a href="#contato">Contato</a>
         </div>
     </div>
 
@@ -595,7 +703,6 @@
         </p>
 
         <div class="poster">
-            <!-- Aqui você coloca a imagem principal do Pipoca -->
             <img src="pipoca.png" alt="Pipoca Oficial">
         </div>
 
@@ -609,7 +716,7 @@
         </div>
     </div>
 
-    <!-- SEÇÃO DE PERSONAGENS COM AS FOTOS QUE VOCÊ FORNECEU -->
+    <!-- SEÇÃO DE PERSONAGENS -->
     <div id="personagens" class="characters-section">
         <h2>🌟 Conheça Nossos Personagens 🌟</h2>
         
@@ -692,6 +799,42 @@
         </div>
     </div>
 
+    <!-- SEÇÃO DE CONTATO COM E-MAIL E TELEFONE -->
+    <div id="contato" class="contact-section">
+        <h2>📞 Fale Conosco</h2>
+        
+        <div class="contact-info">
+            <!-- E-mail -->
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>E-MAIL</h3>
+                    <a href="mailto:Pipoca-oficial@outlook.com">Pipoca-oficial@outlook.com</a>
+                </div>
+            </div>
+
+            <!-- Telefone / WhatsApp -->
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>TELEFONE / WHATSAPP</h3>
+                    <a href="https://wa.me/5524992080978" target="_blank">(24) 99208-0978</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão do WhatsApp direto -->
+        <div class="contact-whatsapp">
+            <a href="https://wa.me/5524992080978" target="_blank" class="btn">
+                <i class="fab fa-whatsapp"></i> Enviar WhatsApp
+            </a>
+        </div>
+    </div>
+
     <!-- HIGHLIGHT SECTION -->
     <div class="highlight">
         <h2>🌟 Uma Nova Era da Animação 🌟</h2>
@@ -742,12 +885,12 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Suporte</h4>
+                <h4>Contato</h4>
                 <ul>
+                    <li><a href="mailto:Pipoca-oficial@outlook.com">E-mail</a></li>
+                    <li><a href="https://wa.me/5524992080978" target="_blank">WhatsApp</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contato</a></li>
                     <li><a href="#">Política de privacidade</a></li>
-                    <li><a href="#">Termos de uso</a></li>
                 </ul>
             </div>
         </div>
