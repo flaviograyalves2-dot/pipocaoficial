@@ -5,111 +5,116 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pipoca Oficial</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family: Arial, sans-serif;
-background: linear-gradient(-45deg,#ff512f,#dd2476,#ffcc00,#ff512f);
-background-size:400% 400%;
-animation: fundoAnimado 10s ease infinite;
-text-align:center;
+font-family:'Poppins', sans-serif;
+background: linear-gradient(180deg,#ff512f,#dd2476);
 color:white;
+overflow-x:hidden;
 }
 
-@keyframes fundoAnimado{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
-/* TOPO */
+/* ===== HEADER ===== */
 .header{
-background: rgba(0,0,0,0.3);
+background: linear-gradient(90deg,#ff0000,#ffcc00);
 padding:35px;
+text-align:center;
 font-size:60px;
 font-family:'Bangers', cursive;
 letter-spacing:4px;
-color:#fff;
-text-shadow:4px 4px 10px rgba(0,0,0,0.6);
+color:white;
+text-shadow:4px 4px 15px rgba(0,0,0,0.6);
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero{
-padding:70px 20px;
+text-align:center;
+padding:80px 20px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:52px;
+font-weight:800;
 color:black;
 margin-bottom:20px;
 }
 
-/* FOTO */
+.hero p{
+font-size:22px;
+max-width:750px;
+margin:auto;
+margin-bottom:50px;
+font-weight:300;
+}
+
+/* ===== FOTO CENTRAL ===== */
 .poster{
 display:flex;
 justify-content:center;
-margin:50px 0;
+margin:60px 0;
 }
 
 .poster img{
-width:450px;
+width:480px;
 max-width:90%;
-border-radius:30px;
-box-shadow:0 0 80px rgba(0,0,0,0.7);
+border-radius:35px;
+box-shadow:0 0 100px rgba(0,0,0,0.7);
 transition:0.4s;
 }
 
 .poster img:hover{
-transform:scale(1.05);
+transform:scale(1.07);
 }
 
-/* BOTÃO */
+/* ===== BOTÃO ===== */
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:16px 45px;
-background:white;
-color:#ff512f;
-font-weight:bold;
+padding:18px 55px;
+background:#FFD700;
+color:black;
+font-weight:600;
 font-size:22px;
-border-radius:50px;
+border-radius:60px;
 text-decoration:none;
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
 transition:0.3s;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
 .btn:hover{
-background:#FFD700;
-transform:scale(1.08);
+background:#FFA500;
+transform:scale(1.1);
 }
 
-/* SEÇÃO */
-.section{
-padding:80px 20px;
+/* ===== DESTAQUE ===== */
+.highlight{
+margin-top:80px;
 background:rgba(0,0,0,0.25);
+padding:100px 20px;
+text-align:center;
 }
 
-.section h2{
-font-size:40px;
+.highlight h2{
+font-size:44px;
 margin-bottom:20px;
 }
 
-.section p{
+.highlight p{
 font-size:20px;
 max-width:800px;
 margin:auto;
 line-height:1.6;
 }
 
-/* RODAPÉ */
+/* ===== RODAPÉ ===== */
 .footer{
-padding:30px;
+padding:40px;
 background:rgba(0,0,0,0.5);
+text-align:center;
 font-size:14px;
-margin-top:80px;
+margin-top:100px;
 }
 
 </style>
@@ -123,7 +128,12 @@ PIPOCA OFICIAL
 
 <div class="hero">
 
-<h1>Prepare-se para uma Explosão de Diversão!</h1>
+<h1>Prepare-se Para Uma Explosão de Diversão!</h1>
+
+<p>
+Um universo vibrante, cheio de energia, aventura e imaginação.
+O Pipoca não é apenas um personagem — é um movimento.
+</p>
 
 <div class="poster">
 <img src="pipoca.png">
@@ -135,12 +145,15 @@ Assistir no YouTube
 
 </div>
 
-<div class="section">
-<h2>Um Universo Cheio de Aventuras</h2>
+<div class="highlight">
+
+<h2>Uma Nova Era da Animação</h2>
+
 <p>
-Cada episódio traz uma nova história, novos desafios e muita emoção.
-Entre no mundo do Pipoca e viva momentos inesquecíveis!
+Cada episódio traz emoção, aprendizado e momentos inesquecíveis.
+Entre agora no mundo do Pipoca e faça parte dessa jornada épica.
 </p>
+
 </div>
 
 <div class="footer">
