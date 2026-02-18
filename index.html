@@ -11,74 +11,79 @@
 
 body{
 margin:0;
-font-family: 'Segoe UI', Arial, sans-serif;
-background: linear-gradient(180deg,#ff512f,#dd2476);
-color:white;
+font-family: Arial, sans-serif;
+background: linear-gradient(-45deg,#ff512f,#dd2476,#ffcc00,#ff512f);
+background-size:400% 400%;
+animation: fundoAnimado 10s ease infinite;
 text-align:center;
-overflow-x:hidden;
+color:white;
 }
 
-/* HEADER */
+@keyframes fundoAnimado{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* TOPO */
 .header{
-background: linear-gradient(90deg,#ff0000,#ffcc00);
+background: rgba(0,0,0,0.3);
 padding:35px;
-font-size:52px;
-font-family: 'Bangers', cursive;
+font-size:60px;
+font-family:'Bangers', cursive;
 letter-spacing:4px;
-color:white;
-text-shadow:3px 3px 8px rgba(0,0,0,0.6);
+color:#fff;
+text-shadow:4px 4px 10px rgba(0,0,0,0.6);
 }
 
 /* HERO */
 .hero{
-padding:60px 20px;
+padding:70px 20px;
 }
 
 .hero h1{
-font-size:46px;
-margin-bottom:15px;
+font-size:48px;
 color:black;
+margin-bottom:20px;
 }
 
-.hero p{
-font-size:22px;
-max-width:700px;
-margin:auto;
-margin-bottom:40px;
-}
-
-/* IMAGEM CENTRAL */
+/* FOTO */
 .poster{
 display:flex;
 justify-content:center;
-margin:40px 0;
+margin:50px 0;
 }
 
 .poster img{
-width:420px;
+width:450px;
 max-width:90%;
 border-radius:30px;
-box-shadow:0 0 60px rgba(0,0,0,0.6);
+box-shadow:0 0 80px rgba(0,0,0,0.7);
+transition:0.4s;
 }
 
-/* BOTÃO MENOR */
+.poster img:hover{
+transform:scale(1.05);
+}
+
+/* BOTÃO */
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:15px 40px;
-background:#FFD700;
-color:black;
-text-decoration:none;
+margin-top:30px;
+padding:16px 45px;
+background:white;
+color:#ff512f;
 font-weight:bold;
-font-size:20px;
+font-size:22px;
 border-radius:50px;
+text-decoration:none;
 transition:0.3s;
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
 .btn:hover{
-background:#FFA500;
-transform:scale(1.05);
+background:#FFD700;
+transform:scale(1.08);
 }
 
 /* SEÇÃO */
@@ -88,7 +93,7 @@ background:rgba(0,0,0,0.25);
 }
 
 .section h2{
-font-size:36px;
+font-size:40px;
 margin-bottom:20px;
 }
 
@@ -101,9 +106,9 @@ line-height:1.6;
 
 /* RODAPÉ */
 .footer{
-padding:35px;
+padding:30px;
 background:rgba(0,0,0,0.5);
-font-size:15px;
+font-size:14px;
 margin-top:80px;
 }
 
@@ -118,33 +123,24 @@ PIPOCA OFICIAL
 
 <div class="hero">
 
-<h1>Prepare-se para uma Explosão de Alegria!</h1>
-
-<p>
-Entre no universo do Pipoca e descubra aventuras incríveis, amizade verdadeira e muita diversão.
-Aqui cada episódio é uma nova surpresa!
-</p>
+<h1>Prepare-se para uma Explosão de Diversão!</h1>
 
 <div class="poster">
 <img src="pipoca.png">
 </div>
 
 <a class="btn" href="https://youtube.com/@pipocaoficial-p?si=VH01GTByg99dxqmw">
-ASSISTIR NO YOUTUBE
+Assistir no YouTube
 </a>
 
 </div>
 
 <div class="section">
-
-<h2>Um Mundo Cheio de Aventuras</h2>
-
+<h2>Um Universo Cheio de Aventuras</h2>
 <p>
-Pipoca é mais do que um personagem — é energia, coragem e imaginação.
-Cada história inspira crianças a acreditarem em si mesmas,
-valorizarem a amizade e celebrarem as diferenças.
+Cada episódio traz uma nova história, novos desafios e muita emoção.
+Entre no mundo do Pipoca e viva momentos inesquecíveis!
 </p>
-
 </div>
 
 <div class="footer">
