@@ -6,75 +6,108 @@
 <title>Pipoca Oficial</title>
 
 <style>
+
 body{
 margin:0;
-font-family: 'Segoe UI', Arial;
+font-family: 'Segoe UI', Arial, sans-serif;
 background: linear-gradient(180deg,#ff512f,#dd2476);
 color:white;
 text-align:center;
+overflow-x:hidden;
 }
 
+/* HEADER */
 .header{
 background: linear-gradient(90deg,#ff0000,#ffcc00);
-padding:30px;
-font-size:40px;
+padding:35px;
+font-size:42px;
 font-weight:bold;
 letter-spacing:4px;
 color:white;
-text-shadow:2px 2px 5px rgba(0,0,0,0.5);
+text-shadow:3px 3px 8px rgba(0,0,0,0.5);
 }
 
+/* HERO */
 .hero{
 padding:60px 20px;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:30px;
+font-size:50px;
+margin-bottom:15px;
 color:black;
 }
 
+.hero p{
+font-size:22px;
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
+}
+
+/* IMAGEM CENTRAL */
 .poster{
 display:flex;
 justify-content:center;
-align-items:center;
 margin:40px 0;
 }
 
 .poster img{
-width:380px;
+width:420px;
 max-width:90%;
-border-radius:25px;
-box-shadow:0 0 50px rgba(0,0,0,0.6);
+border-radius:30px;
+box-shadow:0 0 60px rgba(0,0,0,0.6);
 }
 
+/* BOTÃO */
 .btn{
 display:inline-block;
-margin-top:40px;
-padding:20px 50px;
+margin-top:20px;
+padding:22px 60px;
 background:#FFD700;
 color:black;
 text-decoration:none;
 font-weight:bold;
-font-size:22px;
-border-radius:50px;
+font-size:24px;
+border-radius:60px;
 transition:0.3s;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
+box-shadow:0 15px 35px rgba(0,0,0,0.5);
 }
 
 .btn:hover{
 background:#FFA500;
-transform:scale(1.07);
+transform:scale(1.08);
 }
 
-.footer{
-padding:30px;
-background:rgba(0,0,0,0.4);
-font-size:14px;
-margin-top:60px;
+/* SEÇÃO DESTAQUE */
+.section{
+padding:80px 20px;
+background:rgba(0,0,0,0.25);
 }
+
+.section h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.section p{
+font-size:20px;
+max-width:800px;
+margin:auto;
+line-height:1.6;
+}
+
+/* RODAPÉ */
+.footer{
+padding:35px;
+background:rgba(0,0,0,0.5);
+font-size:15px;
+margin-top:80px;
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="header">
@@ -83,15 +116,43 @@ PIPOCA OFICIAL
 
 <div class="hero">
 
-<h1>Bem-vindo ao Mundo do Pipoca!</h1>
+<h1>Prepare-se para uma Explosão de Alegria!</h1>
+
+<p>
+Entre no universo do Pipoca e descubra aventuras incríveis, amizade verdadeira e muita diversão.
+Aqui cada episódio é uma nova surpresa!
+</p>
 
 <div class="poster">
 <img src="pipoca.png">
 </div>
 
 <a class="btn" href="https://youtube.com/@pipocaoficial-p?si=VH01GTByg99dxqmw">
-Assistir no YouTube
+ASSISTIR AGORA NO YOUTUBE
 </a>
+
+</div>
+
+<div class="section">
+
+<h2>Um Mundo Cheio de Aventuras</h2>
+
+<p>
+Pipoca é mais do que um personagem — é energia, coragem e imaginação.
+Cada história inspira crianças a acreditarem em si mesmas,
+valorizarem a amizade e celebrarem as diferenças.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>Faça Parte Dessa Jornada</h2>
+
+<p>
+Inscreva-se no canal oficial e acompanhe cada novo episódio.
+Grandes aventuras começam com um simples clique!
+</p>
 
 </div>
 
@@ -100,4 +161,4 @@ Assistir no YouTube
 </div>
 
 </body>
-</html>
+  </html>
