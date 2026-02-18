@@ -31,7 +31,7 @@
             background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
             padding: 30px 20px;
             text-align: center;
-            font-size: 68px; /* AUMENTADO DE 48px PARA 68px */
+            font-size: 68px;
             font-family: 'Bangers', cursive;
             letter-spacing: 4px;
             color: white;
@@ -69,6 +69,7 @@
             font-size: 18px;
             transition: all 0.3s ease;
             position: relative;
+            font-family: 'Poppins', sans-serif;
         }
 
         .nav a::after {
@@ -86,9 +87,12 @@
             width: 100%;
         }
 
-        /* CORREÇÃO: Garantir que o "i" do Início apareça */
+        /* CORREÇÃO ESPECÍFICA PARA O INÍCIO */
         .nav a:first-child {
             display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            letter-spacing: normal;
         }
 
         /* ===== HERO SECTION ===== */
@@ -408,7 +412,7 @@
         /* ===== RESPONSIVIDADE ===== */
         @media (max-width: 768px) {
             .header {
-                font-size: 48px; /* Ajustado para mobile */
+                font-size: 48px;
                 padding: 20px;
             }
 
@@ -417,7 +421,7 @@
             }
 
             .nav a {
-                font-size: 14px;
+                font-size: 16px; /* Aumentado para melhor legibilidade no mobile */
             }
 
             .btn-group {
@@ -447,7 +451,11 @@
 
         @media (max-width: 480px) {
             .header {
-                font-size: 42px; /* Ajuste para telas muito pequenas */
+                font-size: 42px;
+            }
+            
+            .nav a {
+                font-size: 14px;
             }
         }
     </style>
@@ -458,10 +466,10 @@
         🍿 PIPOCA OFICIAL
     </div>
 
-    <!-- NAVEGAÇÃO -->
+    <!-- NAVEGAÇÃO - CORRIGIDO -->
     <div class="nav">
         <div class="nav-container">
-            <a href="#">Início</a> <!-- CORRIGIDO: Agora o "i" aparece normalmente -->
+            <a href="#">Ínicio</a> <!-- TROQUEI "Início" por "Ínicio" (com acento no I) -->
             <a href="#">Episódios</a>
             <a href="#">Personagens</a>
             <a href="#">Loja</a>
