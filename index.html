@@ -39,19 +39,17 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             position: relative;
             z-index: 10;
-            /* CORREÇÃO: Removido white-space e overflow que causavam movimento */
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        /* Ajuste para mobile */
         @media (max-width: 600px) {
             .header {
                 font-size: 48px;
                 padding: 25px 15px;
-                white-space: normal; /* Permite quebra apenas em mobile se necessário */
+                white-space: normal;
                 word-break: break-word;
             }
         }
@@ -715,7 +713,8 @@
         </p>
 
         <div class="poster">
-            <img src="pipoca.png" alt="Pipoca Oficial">
+            <!-- CORRIGIDO: Pipoca.png com P maiúsculo -->
+            <img src="Pipoca.png" alt="Pipoca Oficial">
         </div>
 
         <div class="btn-group">
@@ -736,7 +735,8 @@
             <!-- Personagem: Pipoca -->
             <div class="character-card">
                 <div class="character-image">
-                    <img src="pipoca.png" alt="Pipoca - Personagem principal">
+                    <!-- CORRIGIDO: Pipoca.png com P maiúsculo -->
+                    <img src="Pipoca.png" alt="Pipoca - Personagem principal">
                 </div>
                 <h3>Pipoca</h3>
                 <p>O personagem principal cheio de energia e alegria. Vive espalhando diversão por onde passa!</p>
@@ -912,4 +912,4 @@
     </div>
 
 </body>
-                        </html>
+    </html>
